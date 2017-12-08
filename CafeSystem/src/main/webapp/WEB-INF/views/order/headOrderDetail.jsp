@@ -124,13 +124,13 @@
 							<c:if test="${headOrder.get(0).getHeadEmployeeCode() eq null}">
 								<button type="button" class="btn btn-default" id="orderApprovalBtn">발주승인</button>
 							</c:if>
-							<c:if test="${headOrder.get(0).getOrderCateCode() eq '709'}">
+							<c:if test="${headOrder.get(0).getReceiptCateCode() eq '703'}">
 								<button type="button" class="btn btn-default" id="orderDeliveryBtn">발송완료</button>
 							</c:if>
-							<c:if test="${headOrderCancel.headEmployeeCode eq null}">
+							<c:if test="${headOrderCancel.headEmployeeCode ne null}">
 								<button type="button" class="btn btn-default" id="orderCancelBtn">취소승인</button>
 							</c:if>
-							<c:if test="${headOrderCancel.orderRefundAdmin eq null}">
+							<c:if test="${headOrderCancel.orderRefundAdmin ne null}">
 								<button type="button" class="btn btn-default" id="orderRefundBtn">환불승인</button>
 							</c:if>
 						</div>
